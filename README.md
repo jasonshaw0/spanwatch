@@ -1,5 +1,7 @@
 # spanwatch
 
+[![CI](https://github.com/jasonshaw0/spanwatch/actions/workflows/ci.yml/badge.svg)](https://github.com/jasonshaw0/spanwatch/actions/workflows/ci.yml)
+
 Batched range invalidation with deduplicated consumers and exact explanations.
 
 Declare which regions each consumer reads. Compile once, then submit batches of
@@ -29,12 +31,13 @@ Both consumers are selected; `checksum` appears once. Consumer values need no
 even if values are equal. Values are borrowed in results.
 
 Rust 2024; MSRV 1.88. Zero runtime dependencies. Unsafe code is forbidden.
-The crate is locally prepared for publication and is not published by this task.
-Use a local dependency to try it:
+The source is public on [GitHub](https://github.com/jasonshaw0/spanwatch).
+The crate has not been published to crates.io. Use a Git dependency to try the
+current development version:
 
 ```toml
 [dependencies]
-spanwatch = { path = "../spanwatch" }
+spanwatch = { git = "https://github.com/jasonshaw0/spanwatch" }
 ```
 
 The centered interval tree supports O(log(n + 1) + k) range lookup; batching adds

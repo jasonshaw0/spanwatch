@@ -6,6 +6,7 @@ rust-version = "1.88"
 description = "Batched range invalidation with deduplicated consumers and exact overlap witnesses"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
+repository = "https://github.com/jasonshaw0/spanwatch"
 keywords = ["interval", "invalidation", "incremental", "range", "cache"]
 categories = ["data-structures", "algorithms", "caching"]
 include = ["src/**", "examples/**", "tests/**", "benches/**", "docs/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE*", "CHANGELOG.md", "CONTRIBUTING.md"]

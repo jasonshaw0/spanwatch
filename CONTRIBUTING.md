@@ -34,10 +34,11 @@ logic. Avoid tests which merely repeat implementation details. Performance chang
 need equivalent baseline work, recorded environment, and actual measurements.
 
 CI checks stable on Windows and Linux and the declared minimum compiler on Linux.
-These workflows are prepared locally; hosted CI results require a hosted repository.
+See [GitHub Actions](https://github.com/jasonshaw0/spanwatch/actions/workflows/ci.yml)
+for hosted run results.
 
-Before publishing: choose and verify repository ownership/URLs in Cargo metadata,
-recheck name availability, review the packaged source and licensing, rerun checks,
+Before publishing to crates.io: recheck name availability, review the packaged
+source and licensing, rerun checks,
 and confirm release authorization. This repository does not publish automatically.
 
 Unless you explicitly state otherwise, intentionally submitted contributions are
