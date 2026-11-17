@@ -1,0 +1,31 @@
+[package]
+name = "spanwatch"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Batched range invalidation with deduplicated consumers and exact overlap witnesses"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["interval", "invalidation", "incremental", "range", "cache"]
+categories = ["data-structures", "algorithms", "caching"]
+include = ["src/**", "examples/**", "tests/**", "benches/**", "docs/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE*", "CHANGELOG.md", "CONTRIBUTING.md"]
+
+[dev-dependencies]
+criterion = { version = "0.8.2", default-features = false }
+proptest = "1.12"
+intervaltree = "0.2.7"
+stats_alloc = "0.1.10"
+
+[[bench]]
+name = "invalidation"
+harness = false
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "deny"
+
+[lints.rustdoc]
+broken_intra_doc_links = "deny"
+
+[lints.clippy]
+all = "warn"

@@ -1,0 +1,394 @@
+   Compiling stats_alloc v0.1.10
+   Compiling spanwatch v0.1.0 (C:\Users\jj\spanwatch)
+    Finished `bench` profile [optimized] target(s) in 3.50s
+     Running unittests src\lib.rs (target\release\build\spanwatch/70cdaf3269fdfdbb\out\spanwatch-70cdaf3269fdfdbb.exe)
+
+running 2 tests
+test tests::generation_wrap_clears_all_retained_stamps ... ignored
+test tests::prepared_storage_does_not_grow_or_move_across_queries ... ignored
+
+test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running benches\invalidation.rs (target\release\build\spanwatch/28bf2c1c0afb3a00\out\invalidation-28bf2c1c0afb3a00.exe)
+Benchmarking sparse/spanwatch/256
+Benchmarking sparse/spanwatch/256: Warming up for 100.00 ms
+Benchmarking sparse/spanwatch/256: Collecting 30 samples in estimated 500.08 ms (1.4M iterations)
+Benchmarking sparse/spanwatch/256: Analyzing
+sparse/spanwatch/256    time:   [360.34 ns 364.75 ns 368.90 ns]
+                        change: [−7.3129% −2.7761% +1.9448%] (p = 0.27 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) low mild
+Benchmarking sparse/linear/256
+Benchmarking sparse/linear/256: Warming up for 100.00 ms
+Benchmarking sparse/linear/256: Collecting 30 samples in estimated 500.49 ms (60k iterations)
+Benchmarking sparse/linear/256: Analyzing
+sparse/linear/256       time:   [7.5490 µs 7.6346 µs 7.7474 µs]
+                        change: [−6.0235% −3.8571% −1.7994%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking sparse/intervaltree/256
+Benchmarking sparse/intervaltree/256: Warming up for 100.00 ms
+Benchmarking sparse/intervaltree/256: Collecting 30 samples in estimated 500.22 ms (630k iterations)
+Benchmarking sparse/intervaltree/256: Analyzing
+sparse/intervaltree/256 time:   [782.70 ns 793.73 ns 806.10 ns]
+                        change: [−5.3006% −2.7785% −0.2736%] (p = 0.04 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking sparse/spanwatch/4096
+Benchmarking sparse/spanwatch/4096: Warming up for 100.00 ms
+Benchmarking sparse/spanwatch/4096: Collecting 30 samples in estimated 500.00 ms (899k iterations)
+Benchmarking sparse/spanwatch/4096: Analyzing
+sparse/spanwatch/4096   time:   [561.18 ns 568.26 ns 574.22 ns]
+                        change: [−4.7456% −0.3860% +2.8546%] (p = 0.88 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking sparse/linear/4096
+Benchmarking sparse/linear/4096: Warming up for 100.00 ms
+Benchmarking sparse/linear/4096: Collecting 30 samples in estimated 546.18 ms (3720 iterations)
+Benchmarking sparse/linear/4096: Analyzing
+sparse/linear/4096      time:   [143.70 µs 144.45 µs 145.39 µs]
+                        change: [−7.8923% −6.1027% −4.2596%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high severe
+Benchmarking sparse/intervaltree/4096
+Benchmarking sparse/intervaltree/4096: Warming up for 100.00 ms
+Benchmarking sparse/intervaltree/4096: Collecting 30 samples in estimated 500.49 ms (404k iterations)
+Benchmarking sparse/intervaltree/4096: Analyzing
+sparse/intervaltree/4096
+                        time:   [1.1525 µs 1.1744 µs 1.2081 µs]
+                        change: [−2.1438% +2.1324% +6.2777%] (p = 0.36 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 30 measurements (20.00%)
+  6 (20.00%) high severe
+Benchmarking sparse/spanwatch/65536
+Benchmarking sparse/spanwatch/65536: Warming up for 100.00 ms
+Benchmarking sparse/spanwatch/65536: Collecting 30 samples in estimated 500.34 ms (510k iterations)
+Benchmarking sparse/spanwatch/65536: Analyzing
+sparse/spanwatch/65536  time:   [967.68 ns 974.44 ns 982.70 ns]
+                        change: [−18.954% −16.936% −14.905%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking sparse/linear/65536
+Benchmarking sparse/linear/65536: Warming up for 100.00 ms
+Benchmarking sparse/linear/65536: Collecting 30 samples in estimated 522.08 ms (150 iterations)
+Benchmarking sparse/linear/65536: Analyzing
+sparse/linear/65536     time:   [3.3875 ms 3.4170 ms 3.4451 ms]
+                        change: [−17.434% −15.927% −14.361%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 5 outliers among 30 measurements (16.67%)
+  1 (3.33%) low severe
+  2 (6.67%) low mild
+  2 (6.67%) high mild
+Benchmarking sparse/intervaltree/65536
+Benchmarking sparse/intervaltree/65536: Warming up for 100.00 ms
+Benchmarking sparse/intervaltree/65536: Collecting 30 samples in estimated 500.58 ms (286k iterations)
+Benchmarking sparse/intervaltree/65536: Analyzing
+sparse/intervaltree/65536
+                        time:   [1.6966 µs 1.7186 µs 1.7466 µs]
+                        change: [−16.282% −14.579% −12.825%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 30 measurements (6.67%)
+  2 (6.67%) high severe
+
+Benchmarking dense/spanwatch/256
+Benchmarking dense/spanwatch/256: Warming up for 100.00 ms
+Benchmarking dense/spanwatch/256: Collecting 30 samples in estimated 500.24 ms (767k iterations)
+Benchmarking dense/spanwatch/256: Analyzing
+dense/spanwatch/256     time:   [654.50 ns 665.52 ns 682.80 ns]
+                        change: [−89.182% −88.810% −88.388%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 30 measurements (6.67%)
+  1 (3.33%) high mild
+  1 (3.33%) high severe
+Benchmarking dense/linear/256
+Benchmarking dense/linear/256: Warming up for 100.00 ms
+Benchmarking dense/linear/256: Collecting 30 samples in estimated 500.16 ms (653k iterations)
+Benchmarking dense/linear/256: Analyzing
+dense/linear/256        time:   [764.25 ns 772.73 ns 779.94 ns]
+                        change: [−26.541% −25.508% −24.553%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking dense/intervaltree/256
+Benchmarking dense/intervaltree/256: Warming up for 100.00 ms
+Benchmarking dense/intervaltree/256: Collecting 30 samples in estimated 501.90 ms (99k iterations)
+Benchmarking dense/intervaltree/256: Analyzing
+dense/intervaltree/256  time:   [5.0316 µs 5.6626 µs 6.4512 µs]
+                        change: [−23.049% −18.936% −12.332%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 3 outliers among 30 measurements (10.00%)
+  1 (3.33%) high mild
+  2 (6.67%) high severe
+Benchmarking dense/spanwatch/4096
+Benchmarking dense/spanwatch/4096: Warming up for 100.00 ms
+Benchmarking dense/spanwatch/4096: Collecting 30 samples in estimated 502.86 ms (13k iterations)
+Benchmarking dense/spanwatch/4096: Analyzing
+dense/spanwatch/4096    time:   [18.576 µs 19.357 µs 20.563 µs]
+                        change: [−86.022% −82.035% −76.810%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 6 outliers among 30 measurements (20.00%)
+  1 (3.33%) high mild
+  5 (16.67%) high severe
+Benchmarking dense/linear/4096
+Benchmarking dense/linear/4096: Warming up for 100.00 ms
+Benchmarking dense/linear/4096: Collecting 30 samples in estimated 507.23 ms (27k iterations)
+Benchmarking dense/linear/4096: Analyzing
+dense/linear/4096       time:   [34.176 µs 39.862 µs 46.251 µs]
+                        change: [+67.524% +111.78% +159.14%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 30 measurements (6.67%)
+  1 (3.33%) high mild
+  1 (3.33%) high severe
+Benchmarking dense/intervaltree/4096
+Benchmarking dense/intervaltree/4096: Warming up for 100.00 ms
+Benchmarking dense/intervaltree/4096: Collecting 30 samples in estimated 590.91 ms (2790 iterations)
+Benchmarking dense/intervaltree/4096: Analyzing
+dense/intervaltree/4096 time:   [175.48 µs 206.76 µs 246.30 µs]
+                        change: [+42.637% +59.727% +79.163%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking dense/spanwatch/65536
+Benchmarking dense/spanwatch/65536: Warming up for 100.00 ms
+Benchmarking dense/spanwatch/65536: Collecting 30 samples in estimated 527.69 ms (1395 iterations)
+Benchmarking dense/spanwatch/65536: Analyzing
+dense/spanwatch/65536   time:   [290.90 µs 299.50 µs 310.47 µs]
+                        change: [−90.313% −89.832% −89.289%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking dense/linear/65536
+Benchmarking dense/linear/65536: Warming up for 100.00 ms
+
+Warning: Unable to complete 30 samples in 500.0ms. You may wish to increase target time to 508.3ms, enable flat sampling, or reduce sample count to 20.
+Benchmarking dense/linear/65536: Collecting 30 samples in estimated 508.33 ms (465 iterations)
+Benchmarking dense/linear/65536: Analyzing
+dense/linear/65536      time:   [528.31 µs 707.49 µs 1.0175 ms]
+                        change: [+129.17% +227.75% +333.64%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking dense/intervaltree/65536
+Benchmarking dense/intervaltree/65536: Warming up for 100.00 ms
+Benchmarking dense/intervaltree/65536: Collecting 30 samples in estimated 559.97 ms (150 iterations)
+Benchmarking dense/intervaltree/65536: Analyzing
+dense/intervaltree/65536
+                        time:   [5.1943 ms 6.6672 ms 8.2826 ms]
+                        change: [+27.368% +64.208% +110.03%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+Benchmarking repeated/spanwatch/256
+Benchmarking repeated/spanwatch/256: Warming up for 100.00 ms
+Benchmarking repeated/spanwatch/256: Collecting 30 samples in estimated 500.17 ms (149k iterations)
+Benchmarking repeated/spanwatch/256: Analyzing
+repeated/spanwatch/256  time:   [2.9420 µs 3.2599 µs 3.5657 µs]
+                        change: [+96.759% +121.70% +152.36%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 30 measurements (6.67%)
+  2 (6.67%) high mild
+Benchmarking repeated/linear/256
+Benchmarking repeated/linear/256: Warming up for 100.00 ms
+Benchmarking repeated/linear/256: Collecting 30 samples in estimated 526.60 ms (8370 iterations)
+Benchmarking repeated/linear/256: Analyzing
+repeated/linear/256     time:   [40.121 µs 40.897 µs 41.913 µs]
+                        change: [+15.959% +19.904% +25.689%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 30 measurements (6.67%)
+  2 (6.67%) high severe
+Benchmarking repeated/intervaltree/256
+Benchmarking repeated/intervaltree/256: Warming up for 100.00 ms
+Benchmarking repeated/intervaltree/256: Collecting 30 samples in estimated 501.05 ms (164k iterations)
+Benchmarking repeated/intervaltree/256: Analyzing
+repeated/intervaltree/256
+                        time:   [2.7077 µs 2.7744 µs 2.8470 µs]
+                        change: [−36.949% −26.123% −11.456%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 30 measurements (6.67%)
+  2 (6.67%) high mild
+Benchmarking repeated/spanwatch/4096
+Benchmarking repeated/spanwatch/4096: Warming up for 100.00 ms
+Benchmarking repeated/spanwatch/4096: Collecting 30 samples in estimated 500.30 ms (190k iterations)
+Benchmarking repeated/spanwatch/4096: Analyzing
+repeated/spanwatch/4096 time:   [2.5549 µs 2.5858 µs 2.6064 µs]
+                        change: [−1.7153% +12.175% +27.478%] (p = 0.08 > 0.05)
+                        No change in performance detected.
+Found 3 outliers among 30 measurements (10.00%)
+  1 (3.33%) low severe
+  1 (3.33%) high mild
+  1 (3.33%) high severe
+Benchmarking repeated/linear/4096
+Benchmarking repeated/linear/4096: Warming up for 100.00 ms
+Benchmarking repeated/linear/4096: Collecting 30 samples in estimated 641.26 ms (930 iterations)
+Benchmarking repeated/linear/4096: Analyzing
+repeated/linear/4096    time:   [677.47 µs 684.03 µs 691.06 µs]
+                        change: [−18.132% −8.5188% +2.0764%] (p = 0.15 > 0.05)
+                        No change in performance detected.
+Benchmarking repeated/intervaltree/4096
+Benchmarking repeated/intervaltree/4096: Warming up for 100.00 ms
+Benchmarking repeated/intervaltree/4096: Collecting 30 samples in estimated 500.61 ms (128k iterations)
+Benchmarking repeated/intervaltree/4096: Analyzing
+repeated/intervaltree/4096
+                        time:   [3.8102 µs 3.9227 µs 4.0360 µs]
+                        change: [−0.4916% +12.971% +28.281%] (p = 0.06 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 30 measurements (20.00%)
+  1 (3.33%) low severe
+  3 (10.00%) low mild
+  1 (3.33%) high mild
+  1 (3.33%) high severe
+Benchmarking repeated/spanwatch/65536
+Benchmarking repeated/spanwatch/65536: Warming up for 100.00 ms
+Benchmarking repeated/spanwatch/65536: Collecting 30 samples in estimated 501.07 ms (141k iterations)
+Benchmarking repeated/spanwatch/65536: Analyzing
+repeated/spanwatch/65536
+                        time:   [3.4489 µs 3.4912 µs 3.5358 µs]
+                        change: [−8.6038% +3.6934% +16.949%] (p = 0.59 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 30 measurements (6.67%)
+  1 (3.33%) high mild
+  1 (3.33%) high severe
+Benchmarking repeated/linear/65536
+Benchmarking repeated/linear/65536: Warming up for 100.00 ms
+
+Warning: Unable to complete 30 samples in 500.0ms. You may wish to increase target time to 521.7ms, or reduce sample count to 20.
+Benchmarking repeated/linear/65536: Collecting 30 samples in estimated 521.71 ms (30 iterations)
+Benchmarking repeated/linear/65536: Analyzing
+repeated/linear/65536   time:   [15.230 ms 15.508 ms 15.786 ms]
+                        change: [−20.066% −9.8163% +2.2198%] (p = 0.14 > 0.05)
+                        No change in performance detected.
+Benchmarking repeated/intervaltree/65536
+Benchmarking repeated/intervaltree/65536: Warming up for 100.00 ms
+Benchmarking repeated/intervaltree/65536: Collecting 30 samples in estimated 501.40 ms (86k iterations)
+Benchmarking repeated/intervaltree/65536: Analyzing
+repeated/intervaltree/65536
+                        time:   [5.3751 µs 5.4677 µs 5.5788 µs]
+                        change: [−2.1196% +13.210% +30.822%] (p = 0.09 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 30 measurements (6.67%)
+  1 (3.33%) low severe
+  1 (3.33%) high mild
+
+Benchmarking nested/spanwatch/256
+Benchmarking nested/spanwatch/256: Warming up for 100.00 ms
+Benchmarking nested/spanwatch/256: Collecting 30 samples in estimated 500.33 ms (626k iterations)
+Benchmarking nested/spanwatch/256: Analyzing
+nested/spanwatch/256    time:   [831.52 ns 1.0373 µs 1.2757 µs]
+                        change: [−2.6028% +13.558% +32.923%] (p = 0.13 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 30 measurements (6.67%)
+  2 (6.67%) high severe
+Benchmarking nested/linear/256
+Benchmarking nested/linear/256: Warming up for 100.00 ms
+Benchmarking nested/linear/256: Collecting 30 samples in estimated 500.13 ms (1.4M iterations)
+Benchmarking nested/linear/256: Analyzing
+nested/linear/256       time:   [445.56 ns 506.32 ns 573.11 ns]
+                        change: [−20.321% −3.9937% +16.018%] (p = 0.68 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking nested/intervaltree/256
+Benchmarking nested/intervaltree/256: Warming up for 100.00 ms
+Benchmarking nested/intervaltree/256: Collecting 30 samples in estimated 500.08 ms (245k iterations)
+Benchmarking nested/intervaltree/256: Analyzing
+nested/intervaltree/256 time:   [1.8037 µs 2.0426 µs 2.2939 µs]
+                        change: [−10.001% +4.9096% +23.639%] (p = 0.56 > 0.05)
+                        No change in performance detected.
+Benchmarking nested/spanwatch/4096
+Benchmarking nested/spanwatch/4096: Warming up for 100.00 ms
+Benchmarking nested/spanwatch/4096: Collecting 30 samples in estimated 504.65 ms (31k iterations)
+Benchmarking nested/spanwatch/4096: Analyzing
+nested/spanwatch/4096   time:   [14.539 µs 16.511 µs 18.722 µs]
+                        change: [−24.416% −12.582% +1.0476%] (p = 0.09 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking nested/linear/4096
+Benchmarking nested/linear/4096: Warming up for 100.00 ms
+Benchmarking nested/linear/4096: Collecting 30 samples in estimated 502.71 ms (36k iterations)
+Benchmarking nested/linear/4096: Analyzing
+nested/linear/4096      time:   [10.956 µs 12.447 µs 13.928 µs]
+                        change: [−4.3517% +14.395% +37.702%] (p = 0.15 > 0.05)
+                        No change in performance detected.
+Benchmarking nested/intervaltree/4096
+Benchmarking nested/intervaltree/4096: Warming up for 100.00 ms
+Benchmarking nested/intervaltree/4096: Collecting 30 samples in estimated 516.87 ms (13k iterations)
+Benchmarking nested/intervaltree/4096: Analyzing
+nested/intervaltree/4096
+                        time:   [36.421 µs 41.115 µs 46.093 µs]
+                        change: [+10.953% +28.793% +48.755%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking nested/spanwatch/65536
+Benchmarking nested/spanwatch/65536: Warming up for 100.00 ms
+Benchmarking nested/spanwatch/65536: Collecting 30 samples in estimated 626.04 ms (1860 iterations)
+Benchmarking nested/spanwatch/65536: Analyzing
+nested/spanwatch/65536  time:   [317.99 µs 359.01 µs 400.67 µs]
+                        change: [−30.893% −20.619% −8.9021%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking nested/linear/65536
+Benchmarking nested/linear/65536: Warming up for 100.00 ms
+Benchmarking nested/linear/65536: Collecting 30 samples in estimated 598.09 ms (2325 iterations)
+Benchmarking nested/linear/65536: Analyzing
+nested/linear/65536     time:   [220.76 µs 243.90 µs 268.59 µs]
+                        change: [+17.775% +28.794% +41.680%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking nested/intervaltree/65536
+Benchmarking nested/intervaltree/65536: Warming up for 100.00 ms
+
+Warning: Unable to complete 30 samples in 500.0ms. You may wish to increase target time to 544.4ms, enable flat sampling, or reduce sample count to 20.
+Benchmarking nested/intervaltree/65536: Collecting 30 samples in estimated 544.45 ms (465 iterations)
+Benchmarking nested/intervaltree/65536: Analyzing
+nested/intervaltree/65536
+                        time:   [950.75 µs 1.0665 ms 1.1743 ms]
+                        change: [+31.758% +44.995% +56.909%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+
+Benchmarking setup/build/256
+Benchmarking setup/build/256: Warming up for 100.00 ms
+Benchmarking setup/build/256: Collecting 30 samples in estimated 547.57 ms (3720 iterations)
+Benchmarking setup/build/256: Analyzing
+setup/build/256         time:   [118.92 µs 136.99 µs 157.30 µs]
+                        change: [+6.0603% +16.524% +29.525%] (p = 0.01 < 0.05)
+                        Performance has regressed.
+Benchmarking setup/scratch/256
+Benchmarking setup/scratch/256: Warming up for 100.00 ms
+Benchmarking setup/scratch/256: Collecting 30 samples in estimated 500.02 ms (5.9M iterations)
+Benchmarking setup/scratch/256: Analyzing
+setup/scratch/256       time:   [69.055 ns 78.861 ns 90.684 ns]
+                        change: [−12.601% −2.0564% +8.8499%] (p = 0.71 > 0.05)
+                        No change in performance detected.
+Benchmarking setup/build/4096
+Benchmarking setup/build/4096: Warming up for 100.00 ms
+Benchmarking setup/build/4096: Collecting 30 samples in estimated 550.10 ms (210 iterations)
+Benchmarking setup/build/4096: Analyzing
+setup/build/4096        time:   [2.7680 ms 3.0555 ms 3.3546 ms]
+                        change: [−10.524% −1.3362% +8.2453%] (p = 0.80 > 0.05)
+                        No change in performance detected.
+Benchmarking setup/scratch/4096
+Benchmarking setup/scratch/4096: Warming up for 100.00 ms
+Benchmarking setup/scratch/4096: Collecting 30 samples in estimated 500.12 ms (461k iterations)
+Benchmarking setup/scratch/4096: Analyzing
+setup/scratch/4096      time:   [1.2158 µs 1.2474 µs 1.2823 µs]
+                        change: [−36.535% −34.344% −31.964%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking setup/build/65536
+Benchmarking setup/build/65536: Warming up for 100.00 ms
+
+Warning: Unable to complete 30 samples in 500.0ms. You may wish to increase target time to 1.8s, or reduce sample count to 10.
+Benchmarking setup/build/65536: Collecting 30 samples in estimated 1.8378 s (30 iterations)
+Benchmarking setup/build/65536: Analyzing
+setup/build/65536       time:   [57.912 ms 59.608 ms 61.335 ms]
+                        change: [+1.1428% +5.4908% +9.9103%] (p = 0.02 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 30 measurements (3.33%)
+  1 (3.33%) high mild
+Benchmarking setup/scratch/65536
+Benchmarking setup/scratch/65536: Warming up for 100.00 ms
+Benchmarking setup/scratch/65536: Collecting 30 samples in estimated 505.42 ms (20k iterations)
+Benchmarking setup/scratch/65536: Analyzing
+setup/scratch/65536     time:   [24.717 µs 25.683 µs 26.872 µs]
+                        change: [−11.462% −7.0061% −2.6574%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 3 outliers among 30 measurements (10.00%)
+  3 (10.00%) high mild
